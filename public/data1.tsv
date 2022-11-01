@@ -1,4 +1,4 @@
-name	theme	type	cost	est_cust	maintenance_time	workers updated_at
+name	theme	type	cost	est_cust	maintenance_time	workers	updated_at
 Radical Hot Dogs	extreme	food	89000	139	39	3	2022-05-15T15:12:59.152Z
 Zombie Hot Dogs	spooky	food	128000	64	12	4	2022-05-15T15:12:59.152Z
 Sailor Pins	pirate	shop	89000	123	26	5	2022-05-15T15:12:59.152Z

@@ -7,9 +7,8 @@ export function merge(data1, data2) {
   }
 
   //your code - start
-
-
-  
+  let keyProp = "name";
+  data = data1.filter(d1 => !data2.find(d2 => d1[keyProp] === d2[keyProp])).concat(data2);
 
   //your code - end
 

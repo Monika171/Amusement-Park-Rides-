@@ -27,6 +27,7 @@ a:hover {
 body {
   margin: 0;
   padding: 0;
+  table-layout: fixed;
 }
 
 h1 {
@@ -47,22 +48,79 @@ header {
   display: block;
 }
 
-.table-row {
+.table-row, #attractionData :is(thead tr, tbody tr) {
   border: 1px solid #d0d0d0;
   padding: 1rem;
   margin: 1rem;
   flex-direction: row;
+  max-width: 100%;
   display: flex;
 }
 
-.table-col {
+.table-col, #attractionData :is(thead th, tbody td) {
   padding-right: 1rem;
   display: flex;
   flex-grow: 1;
   justify-content: center;
   /* align-self: center;    <---- REMOVE */
+  width:200px;
   align-items: center; 
   color: #d0d0d0;
+  word-break: break-word;
+  white-space:normal;
+  vertical-align: top;
+}
+
+/* table header */
+#attractionData thead tr {
+  background-color: #043c3f;
+}
+
+#attractionData .dataTables_scrollBody > table > thead > tr {
+  display: none;
+  height: 0px !important;
+}
+
+#attractionData .dataTables_scrollHeadInner table { 
+  margin-bottom: 0px !important; 
+}
+
+#attractionData .dataTables_wrapper :is(.dataTables_filter, .dataTables_info){
+  color: #d0d0d0;
+}
+
+.loadMoreContainer {
+  text-align:center;
+  margin:2em 0;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+#addData {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  text-align:center;
+  margin-bottom: 30px ;
+}
+
+.attractionDataFile {
+  background-color: #2a2929;
+  border: 2px solid #d0d0d0;
+  display: inline-block;
+  padding: 6px 12px;
+  width: 60%;
+  height: 26px;
+  text-align: center;
+  cursor: pointer;
+  margin: auto;
+}
+
+.attractionDataFile:hover {
+  background-color: #2d2d2d;
+  border: 1px solid #d0d0d0;
 }
 
 .img {
@@ -94,6 +152,12 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+:disabled {
+  background-color: #3f3d3d;
+  cursor: not-allowed;
+  transition: border-color 0.25s; 
 }
 
 @media (prefers-color-scheme: light) {
